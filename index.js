@@ -10,9 +10,10 @@ const scopes = [
     'https://www.googleapis.com/auth/gmail.settings.basic'
 ];
 
-// Load email and image URL from environment variables
+// Load email, image URL, and link from environment variables
 const email = process.env.EMAIL;
 const imageUrl = process.env.IMAGE_URL;
+const imageLink = process.env.IMAGE_LINK;
 
 // Authenticate as the service account
 const auth = new google.auth.JWT(
@@ -33,7 +34,7 @@ async function updateSignature() {
             userId: 'me',
             sendAsEmail: email,
             requestBody: {
-                signature: `<div><img src="${imageUrl}" alt="Signature Image" style="width: 382px;"></div>`
+                signature: `<div><a href="${imageLink}" target="_blank"><img src="${imageUrl}" alt="Signature Image" style="width: 382px;"></a></div>`
             }
         });
         console.log('Signature updated:', res.data);
