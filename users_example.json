@@ -1,0 +1,14 @@
+[
+  {
+    "email": "user1@example.com",
+    "image_url": "https://drive.google.com/uc?id=image_id_1"
+  },
+  {
+    "email": "user2@example.com",
+    "image_url": "https://drive.google.com/uc?id=image_id_2"
+  },
+  {
+    "email": "user3@example.com",
+    "image_url": "https://drive.google.com/uc?id=image_id_3"
+  }
+]
